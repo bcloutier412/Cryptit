@@ -186,7 +186,7 @@ def get_key_from_file():
     """
     while True:
         try:
-          file_path = input("Key text file [ ex: keyFile.txt ]: ").strip()
+          file_path = input("Key text file [ ex: key.txt ]: ").strip()
 
           # Check if the file has a .txt extension
           if not file_path.lower().endswith(".txt"):

@@ -1,5 +1,5 @@
-from cryptitFile import *
-from utilsFile import *
+from cryptit import *
+from utils import *
 
 def main():
     """

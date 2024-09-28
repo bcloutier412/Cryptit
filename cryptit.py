@@ -1,4 +1,4 @@
-from utilsFile import *
+from utils import *
 
 
 def caesar_cipher(message, shift=0):
@@ -152,7 +152,7 @@ def encrypt_message():
         None
     """
     # Get the text file contents from the user input
-    message_list = read_text_file_contents(prompt_message="Input text file [ ex: textFile.txt ]: ")
+    message_list = read_text_file_contents(prompt_message="Input text file [ ex: text.txt ]: ")
 
     # Check for errors and return
     if message_list is None:
@@ -187,7 +187,7 @@ def encrypt_message():
                 message_list[index] = encryption_actions[action["task"]](message_list[index])
 
     # Open text file and off load message_list
-    write_to_text_file(message_list, prompt_message="Output cipher text file [ ex: cipherFile.txt ]: ")
+    write_to_text_file(message_list, prompt_message="Output cipher text file [ ex: cipher.txt ]: ")
 
     print("\nSuccess! Your message has been encrypted. You will be able to view the encrypted message in your output file. Please take note of your encryption key and store it safely, as it will be required to decrypt the message.\n")
 
@@ -209,7 +209,7 @@ def decrypt_message():
     Returns:
         None
     """
-    message_list = read_text_file_contents(prompt_message="Input cipher text file [ ex: cipherFile.txt ]: ")
+    message_list = read_text_file_contents(prompt_message="Input cipher text file [ ex: cipher.txt ]: ")
 
     # Check for errors and return
     if message_list is None:
@@ -244,7 +244,7 @@ def decrypt_message():
                 message_list[index] = encryption_actions[action["task"]](message_list[index])
 
     # Open text file and off load message_list
-    write_to_text_file(message_list, prompt_message="Ouput text file [ ex: ouputFile.txt ]: ")
+    write_to_text_file(message_list, prompt_message="Ouput text file [ ex: ouput.txt ]: ")
 
     print("\nSuccess! Your message has been decrypted. You will be able to view the decrypted message in your ouput file.\n")
 
